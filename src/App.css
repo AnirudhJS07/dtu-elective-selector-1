@@ -1,38 +1,163 @@
-.App {
-  text-align: center;
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+  font-family: Arial, Helvetica, sans-serif;
+  list-style: none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  padding: 1.5rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: 1.5rem;
+  flex-direction: column;
+}
+
+#branch-select {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 0 15px;
+}
+
+th {
+  background-color: #4287f5;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+th,
+td {
+  width: 150px;
+  text-align: center;
+  border: 1px solid black;
+  padding: 5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.core{
+  background-color: #18ab18ab;
+}
+.dept-elective{
+  background-color: #1881abab;
+}
+.general-elective{
+  background-color: #ab7018ab;
+}
+
+.subject {
+  cursor: pointer;
+}
+
+/* Modal Styles */
+
+.background {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  position: relative;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.cross {
+  position: absolute;
+  top: 0.75em;
+  right: 1em;
+  width: 32px;
+  height: 32px;
+  opacity: 0.3;
+
+  cursor: pointer;
+}
+
+.cross:hover {
+  opacity: 1;
+}
+
+.cross::after,
+.cross::before {
+  content: '';
+  position: absolute;
+  left: 15px;
+  height: 20px;
+  width: 2px;
+  background-color: #8c8c8c;
+}
+
+.cross::before {
+  transform: rotate(45deg);
+}
+
+.cross::after {
+  transform: rotate(-45deg);
+}
+
+.cross.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Select modal styles */
+.select-modal {
+  padding: 1.5rem;
+
+  min-width: 25rem;
+  max-height: 40vh;
+  overflow-y: scroll;
+}
+
+.select-modal li {
+  padding: 0.25rem;
+}
+
+.select-modal li:hover {
+  cursor: pointer;
+  background-color: #ccc;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(119, 119, 119);
+}
+
+/* Selected Subjects list Styles*/
+.selected-subjects {
+  width: 100%;
+
 }
