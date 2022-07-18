@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/dtu-elective-selector/static/css/main.8993dbb3.css",
+    "main.js": "/dtu-elective-selector/static/js/main.47da0b3e.js",
+    "index.html": "/dtu-elective-selector/index.html",
+    "main.8993dbb3.css.map": "/dtu-elective-selector/static/css/main.8993dbb3.css.map",
+    "main.47da0b3e.js.map": "/dtu-elective-selector/static/js/main.47da0b3e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8993dbb3.css",
+    "static/js/main.47da0b3e.js"
+  ]
+}
