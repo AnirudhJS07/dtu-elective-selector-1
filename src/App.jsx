@@ -112,13 +112,43 @@ const App = () => {
               selectedSubject={selectedElectives.find((e) => e.slot === 'E5')}
               branch={branch}
             />
-            <td>E5</td>
-            <td>E1</td>
-            <td>E1</td>
+            <Subject
+              setShowModal={setShowModal}
+              setCurrentSlot={setCurrentSlot}
+              slot={'E5'}
+              selectedSubject={selectedElectives.find((e) => e.slot === 'E5')}
+              branch={branch}
+            />
+            <Subject
+              setShowModal={setShowModal}
+              setCurrentSlot={setCurrentSlot}
+              slot={'E1'}
+              selectedSubject={selectedElectives.find((e) => e.slot === 'E1')}
+              branch={branch}
+            />
+            <Subject
+              setShowModal={setShowModal}
+              setCurrentSlot={setCurrentSlot}
+              slot={'E1'}
+              selectedSubject={selectedElectives.find((e) => e.slot === 'E1')}
+              branch={branch}
+            />
             <td className='core'>CORE</td>
             <td className='core'>CORE</td>
-            <td>E3</td>
-            <td>E3</td>
+            <Subject
+              setShowModal={setShowModal}
+              setCurrentSlot={setCurrentSlot}
+              slot={'E3'}
+              selectedSubject={selectedElectives.find((e) => e.slot === 'E3')}
+              branch={branch}
+            />
+            <Subject
+              setShowModal={setShowModal}
+              setCurrentSlot={setCurrentSlot}
+              slot={'E3'}
+              selectedSubject={selectedElectives.find((e) => e.slot === 'E3')}
+              branch={branch}
+            />
             <td className='core'>CORE</td>
             <td className='core'>CORE</td>
           </tr>
@@ -126,53 +156,197 @@ const App = () => {
             <th>Tuesday</th>
             <td className='core'>CORE</td>
             <td className='core'>CORE</td>
-            <td>E2</td>
-            <td>E2</td>
+            <Subject
+              setShowModal={setShowModal}
+              setCurrentSlot={setCurrentSlot}
+              slot={'E2'}
+              selectedSubject={selectedElectives.find((e) => e.slot === 'E2')}
+              branch={branch}
+            />
+            <Subject
+              setShowModal={setShowModal}
+              setCurrentSlot={setCurrentSlot}
+              slot={'E2'}
+              selectedSubject={selectedElectives.find((e) => e.slot === 'E2')}
+              branch={branch}
+            />
             <td className='core'>CORE</td>
             <td className='core'>CORE</td>
-            <td>E4</td>
-            <td>E4</td>
-            <td>E6</td>
-            <td>E6</td>
+            <Subject
+              setShowModal={setShowModal}
+              setCurrentSlot={setCurrentSlot}
+              slot={'E4'}
+              selectedSubject={selectedElectives.find((e) => e.slot === 'E4')}
+              branch={branch}
+            />
+            <Subject
+              setShowModal={setShowModal}
+              setCurrentSlot={setCurrentSlot}
+              slot={'E4'}
+              selectedSubject={selectedElectives.find((e) => e.slot === 'E4')}
+              branch={branch}
+            />
+            <Subject
+              setShowModal={setShowModal}
+              setCurrentSlot={setCurrentSlot}
+              slot={'E6'}
+              selectedSubject={selectedElectives.find((e) => e.slot === 'E6')}
+              branch={branch}
+            />
+            <Subject
+              setShowModal={setShowModal}
+              setCurrentSlot={setCurrentSlot}
+              slot={'E6'}
+              selectedSubject={selectedElectives.find((e) => e.slot === 'E6')}
+              branch={branch}
+            />
           </tr>
           <tr>
             <th>Wednesday</th>
-            <td>E5</td>
+            <Subject
+              setShowModal={setShowModal}
+              setCurrentSlot={setCurrentSlot}
+              slot={'E5'}
+              selectedSubject={selectedElectives.find((e) => e.slot === 'E5')}
+              branch={branch}
+            />
             <td className='core'>CORE</td>
-            <td>E1</td>
-            <td>E2</td>
+            <Subject
+              setShowModal={setShowModal}
+              setCurrentSlot={setCurrentSlot}
+              slot={'E1'}
+              selectedSubject={selectedElectives.find((e) => e.slot === 'E1')}
+              branch={branch}
+            />
+            <Subject
+              setShowModal={setShowModal}
+              setCurrentSlot={setCurrentSlot}
+              slot={'E2'}
+              selectedSubject={selectedElectives.find((e) => e.slot === 'E2')}
+              branch={branch}
+            />
             <td className='core'>CORE</td>
             <td className='core'>CORE</td>
-            <td>E3</td>
-            <td>E4</td>
+            <Subject
+              setShowModal={setShowModal}
+              setCurrentSlot={setCurrentSlot}
+              slot={'E3'}
+              selectedSubject={selectedElectives.find((e) => e.slot === 'E3')}
+              branch={branch}
+            />
+            <Subject
+              setShowModal={setShowModal}
+              setCurrentSlot={setCurrentSlot}
+              slot={'E4'}
+              selectedSubject={selectedElectives.find((e) => e.slot === 'E4')}
+              branch={branch}
+            />
             <td className='core'>CORE</td>
-            <td>E6</td>
+            <Subject
+              setShowModal={setShowModal}
+              setCurrentSlot={setCurrentSlot}
+              slot={'E6'}
+              selectedSubject={selectedElectives.find((e) => e.slot === 'E6')}
+              branch={branch}
+            />
           </tr>
           <tr>
             <th>Thursday</th>
-            <td>E5</td>
-            <td>E5</td>
-            <td>E1</td>
-            <td>E1</td>
+            <Subject
+              setShowModal={setShowModal}
+              setCurrentSlot={setCurrentSlot}
+              slot={'E5'}
+              selectedSubject={selectedElectives.find((e) => e.slot === 'E5')}
+              branch={branch}
+            />
+            <Subject
+              setShowModal={setShowModal}
+              setCurrentSlot={setCurrentSlot}
+              slot={'E5'}
+              selectedSubject={selectedElectives.find((e) => e.slot === 'E5')}
+              branch={branch}
+            />
+            <Subject
+              setShowModal={setShowModal}
+              setCurrentSlot={setCurrentSlot}
+              slot={'E1'}
+              selectedSubject={selectedElectives.find((e) => e.slot === 'E1')}
+              branch={branch}
+            />
+            <Subject
+              setShowModal={setShowModal}
+              setCurrentSlot={setCurrentSlot}
+              slot={'E1'}
+              selectedSubject={selectedElectives.find((e) => e.slot === 'E1')}
+              branch={branch}
+            />
             <td className='core'>CORE</td>
             <td className='core'>CORE</td>
-            <td>E4</td>
-            <td>E4</td>
-            <td>E6</td>
-            <td>E6</td>
+            <Subject
+              setShowModal={setShowModal}
+              setCurrentSlot={setCurrentSlot}
+              slot={'E3'}
+              selectedSubject={selectedElectives.find((e) => e.slot === 'E3')}
+              branch={branch}
+            />
+            <Subject
+              setShowModal={setShowModal}
+              setCurrentSlot={setCurrentSlot}
+              slot={'E3'}
+              selectedSubject={selectedElectives.find((e) => e.slot === 'E3')}
+              branch={branch}
+            />
+            <td className='core'>CORE</td>
+            <td className='core'>CORE</td>
           </tr>
           <tr>
             <th>Friday</th>
             <td className='core'>CORE</td>
             <td className='core'>CORE</td>
-            <td>E2</td>
-            <td>E3</td>
+            <Subject
+              setShowModal={setShowModal}
+              setCurrentSlot={setCurrentSlot}
+              slot={'E2'}
+              selectedSubject={selectedElectives.find((e) => e.slot === 'E2')}
+              branch={branch}
+            />
+            <Subject
+              setShowModal={setShowModal}
+              setCurrentSlot={setCurrentSlot}
+              slot={'E2'}
+              selectedSubject={selectedElectives.find((e) => e.slot === 'E2')}
+              branch={branch}
+            />
             <td className='core'>CORE</td>
             <td className='core'>CORE</td>
-            <td>E4</td>
-            <td>E4</td>
-            <td>E6</td>
-            <td>E6</td>
+            <Subject
+              setShowModal={setShowModal}
+              setCurrentSlot={setCurrentSlot}
+              slot={'E4'}
+              selectedSubject={selectedElectives.find((e) => e.slot === 'E4')}
+              branch={branch}
+            />
+            <Subject
+              setShowModal={setShowModal}
+              setCurrentSlot={setCurrentSlot}
+              slot={'E4'}
+              selectedSubject={selectedElectives.find((e) => e.slot === 'E4')}
+              branch={branch}
+            />
+            <Subject
+              setShowModal={setShowModal}
+              setCurrentSlot={setCurrentSlot}
+              slot={'E6'}
+              selectedSubject={selectedElectives.find((e) => e.slot === 'E6')}
+              branch={branch}
+            />
+            <Subject
+              setShowModal={setShowModal}
+              setCurrentSlot={setCurrentSlot}
+              slot={'E6'}
+              selectedSubject={selectedElectives.find((e) => e.slot === 'E6')}
+              branch={branch}
+            />
           </tr>
         </tbody>
       </table>
@@ -189,7 +363,7 @@ const App = () => {
           {selectedElectives.map((s) => {
             return (
               <li>
-                {s.code}: {s.name}
+                [{s.code.startsWith(branch) ? 'DEP' : 'GEN'}] {s.code}: {s.name}
               </li>
             )
           })}
