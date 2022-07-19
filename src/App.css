@@ -159,4 +159,20 @@ td {
 /* Selected Subjects list Styles*/
 .selected-subjects {
   width: 100%;
+  margin-bottom: 1rem;
+}
+
+.all-subjects {
+  width: 100%;
+  display: flex;
+  /* align-items: center; */
+  justify-content: space-around;
+}
+
+summary{
+  pointer-events: none;
+}
+
+details {
+  max-width: 40%;
 }

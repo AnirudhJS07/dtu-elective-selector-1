@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { subjectsByDept, subjects, subjectsBySlot } from './data'
 
 import './app.css'
@@ -12,6 +12,22 @@ const App = () => {
   const [selectedElectives, setSelectedElectives] = useState([])
   const [numDeptElective, setNumDeptElective] = useState(0)
   const [numGenElective, setNumGenElective] = useState(0)
+  const [branchSubjects, setBranchSubjects] = useState(subjectsByDept[branch])
+  const [nonBranchSubjects, setNonBranchSubjects] = useState([
+    ...subjects.filter((s) => !s.code.startsWith(branch)),
+  ])
+
+  console.log(branchSubjects, nonBranchSubjects)
+
+  useEffect(() => {
+    setBranchSubjects(subjectsByDept[branch])
+    setNonBranchSubjects([
+      ...subjects.filter((s) => !s.code.startsWith(branch)),
+    ])
+  }, [branch])
+
+  const genDetails = useRef()
+  const deptDetails = useRef()
 
   return (
     <div className='app'>
@@ -21,6 +37,28 @@ const App = () => {
         allowClose={true}
       >
         <ul className='select-modal'>
+          {selectedElectives.findIndex((e) => e.slot === currentSlot) !==
+            -1 && (
+            <li
+              onClick={(e) => {
+                const idx = selectedElectives.findIndex(
+                  (e) => e.slot === currentSlot
+                )
+                if (selectedElectives[idx].code.startsWith(branch)) {
+                  setNumDeptElective(numDeptElective - 1)
+                } else {
+                  setNumGenElective(numGenElective - 1)
+                }
+                setSelectedElectives(
+                  selectedElectives.filter((e) => e.slot !== currentSlot)
+                )
+
+                setShowModal(false)
+              }}
+            >
+              Remove
+            </li>
+          )}
           {subjectsBySlot[currentSlot]?.map((subject) => {
             return (
               <li
@@ -368,6 +406,32 @@ const App = () => {
             )
           })}
         </ul>
+      </div>
+      <div className='all-subjects'>
+        <details open={!showModal} ref={deptDetails}>
+          <summary>Department Electives</summary>
+          <ul className='options-list'>
+            {branchSubjects.map((s) => {
+              return (
+                <li>
+                  {s.slot} - {s.code}: {s.name}
+                </li>
+              )
+            })}
+          </ul>
+        </details>
+        <details open={!showModal} ref={genDetails}>
+          <summary>General Electives</summary>
+          <ul className='options-list'>
+            {nonBranchSubjects.map((s) => {
+              return (
+                <li>
+                  {s.slot} - {s.code}: {s.name}
+                </li>
+              )
+            })}
+          </ul>
+        </details>
       </div>
     </div>
   )
